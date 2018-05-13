@@ -35,6 +35,12 @@ def get_confidence_interval(num_people,
     return lower_bound, upper_bound
 
 
-if __name__ == "__main__":
+def main():
     for num_of_people in range(1, 18):
         (lb, ub) = get_confidence_interval(num_of_people)
+
+    return True
+
+
+if __name__ == "__main__":
+    main()

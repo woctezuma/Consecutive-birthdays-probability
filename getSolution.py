@@ -66,10 +66,16 @@ def get_correct_solution(num_people,
     return proba
 
 
-if __name__ == "__main__":
+def main():
     for num_of_people in range(1, 34):
         try:
             probability = get_correct_solution(num_of_people)
             my_guess = get_my_guess(num_of_people)
         except OverflowError:
             break
+
+    return True
+
+
+if __name__ == "__main__":
+    main()
