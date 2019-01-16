@@ -61,9 +61,8 @@ def get_correct_solution(num_people,
 def main():
     for num_of_people in range(1, 34):
         try:
-            probability = get_correct_solution(num_of_people)
-            my_guess = get_my_guess(num_of_people)
-            print('\nSolution: {:2.5%} \nMy guess: {:2.5%}'.format(probability, my_guess))
+            _ = get_correct_solution(num_of_people)
+            _ = get_my_guess(num_of_people)
         except OverflowError:
             break
 
