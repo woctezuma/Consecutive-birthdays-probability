@@ -23,7 +23,6 @@ def choose(n, k):
 
 
 def get_my_guess(num_people,
-                 precision=1e5,
                  num_days=365):
     """
     Compute my initial guess of the consecutive birthdays probability
@@ -33,15 +32,11 @@ def get_my_guess(num_people,
     for i in range(num_people):
         right_result *= (num_days - 2 * i) / float(num_days)
     guess = left_result * (1 - right_result)
-    print("Number of people:"),
-    print(num_people),
-    print("\tMy guess:"),
-    print(round(guess * precision) / precision)
+    print("Number of people: {}\tMy guess: {:2.5%}".format(num_people, guess))
     return guess
 
 
 def get_correct_solution(num_people,
-                         precision=1e5,
                          num_days=365,
                          limit_overflow=1e42):
     """
@@ -59,10 +54,7 @@ def get_correct_solution(num_people,
         if my_sum > limit_overflow:
             raise OverflowError
     proba = 1 - result
-    print("Number of people:"),
-    print(num_people),
-    print("\tProbability:"),
-    print(round(proba * precision) / precision)
+    print("Number of people: {}\tSolution: {:2.5%}".format(num_people, proba))
     return proba
 
 
