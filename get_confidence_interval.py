@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from math import ceil, floor, sqrt
+from math import sqrt
 from random import randint
 
 
 def get_confidence_interval(num_people,
                             num_iter=1000000,
                             percentile=2.576,
-                            precision=1e5,
                             num_days=365):
     """
     Compute a 99%-confidence interval for consecutive birthdays probability
@@ -26,12 +25,8 @@ def get_confidence_interval(num_people,
     sd = sqrt(variance / float(num_iter - 1))
     lower_bound = mean - percentile * sd / sqrt(num_iter)
     upper_bound = mean + percentile * sd / sqrt(num_iter)
-    print("Number of people:"),
-    print(num_people),
-    print("\tLower bound:"),
-    print(floor(lower_bound * precision) / precision),
-    print("\tUpper bound:"),
-    print(ceil(upper_bound * precision) / precision)
+    print(
+        "Number of people: {}\tLower bound: {:2.5%}\tUpper bound: {:2.5%}".format(num_people, lower_bound, upper_bound))
     return lower_bound, upper_bound
 
 
