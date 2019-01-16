@@ -37,7 +37,7 @@ def get_confidence_interval(num_people,
 
 def main():
     for num_of_people in range(1, 18):
-        (lb, ub) = get_confidence_interval(num_of_people)
+        _, _ = get_confidence_interval(num_of_people)
 
     return True
 
