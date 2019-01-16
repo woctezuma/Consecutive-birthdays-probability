@@ -71,6 +71,7 @@ def main():
         try:
             probability = get_correct_solution(num_of_people)
             my_guess = get_my_guess(num_of_people)
+            print('\nSolution: {:2.5%} \nMy guess: {:2.5%}'.format(probability, my_guess))
         except OverflowError:
             break
 
