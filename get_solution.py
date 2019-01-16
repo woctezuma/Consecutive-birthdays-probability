@@ -3,8 +3,6 @@
 # Source d'inspiration :
 # http://stackoverflow.com/questions/3025162/statistics-combinations-in-python/3025547#3025547
 
-from math import pow
-
 
 def choose(n, k):
     """
