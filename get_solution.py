@@ -20,8 +20,7 @@ def choose(n, k):
         return 0
 
 
-def get_my_guess(num_people,
-                 num_days=365):
+def get_my_guess(num_people, num_days=365):
     """
     Compute my initial guess of the consecutive birthdays probability
     """
@@ -34,12 +33,10 @@ def get_my_guess(num_people,
     return guess
 
 
-def get_correct_solution(num_people,
-                         num_days=365,
-                         limit_overflow=1e42):
+def get_correct_solution(num_people, num_days=365, limit_overflow=1e42):
     """
-   Compute the consecutive birthdays probability
-   """
+    Compute the consecutive birthdays probability
+    """
     result = 0
     for k in range(1, num_people + 1):
         my_product = 1 / float(k * pow(num_days, num_people - k))
