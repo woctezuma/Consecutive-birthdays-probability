@@ -3,9 +3,7 @@
 
 
 def choose(n, k):
-    """
-    A fast way to calculate binomial coefficients by Andrew Dalke (contrib).
-    """
+    """A fast way to calculate binomial coefficients by Andrew Dalke (contrib)."""
     if 0 <= k <= n:
         ntok = 1
         ktok = 1
@@ -19,9 +17,7 @@ def choose(n, k):
 
 
 def get_my_guess(num_people, num_days=365):
-    """
-    Compute my initial guess of the consecutive birthdays probability
-    """
+    """Compute my initial guess of the consecutive birthdays probability."""
     left_result = 1 - (num_people - 1) / float(2 * num_days + num_people - 1)
     right_result = 1
     for i in range(num_people):
@@ -32,9 +28,7 @@ def get_my_guess(num_people, num_days=365):
 
 
 def get_correct_solution(num_people, num_days=365, limit_overflow=1e42):
-    """
-    Compute the consecutive birthdays probability
-    """
+    """Compute the consecutive birthdays probability."""
     result = 0
     for k in range(1, num_people + 1):
         my_product = 1 / float(k * pow(num_days, num_people - k))

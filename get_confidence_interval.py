@@ -8,9 +8,7 @@ def get_confidence_interval(
     percentile=2.576,
     num_days=365,
 ):
-    """
-    Compute a 99%-confidence interval for consecutive birthdays probability
-    """
+    """Compute a 99%-confidence interval for consecutive birthdays probability."""
     mean = 0.0
     variance = 0.0  # not exactly
     for i in range(1, num_iter + 1):
