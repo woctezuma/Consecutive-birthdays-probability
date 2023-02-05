@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # Source d'inspiration :
 # http://stackoverflow.com/questions/3025162/statistics-combinations-in-python/3025547#3025547
 
@@ -29,7 +27,7 @@ def get_my_guess(num_people, num_days=365):
     for i in range(num_people):
         right_result *= (num_days - 2 * i) / float(num_days)
     guess = left_result * (1 - right_result)
-    print("Number of people: {}\tMy guess: {:2.5%}".format(num_people, guess))
+    print(f"Number of people: {num_people}\tMy guess: {guess:2.5%}")
     return guess
 
 
@@ -49,7 +47,7 @@ def get_correct_solution(num_people, num_days=365, limit_overflow=1e42):
         if my_sum > limit_overflow:
             raise OverflowError
     proba = 1 - result
-    print("Number of people: {}\tSolution: {:2.5%}".format(num_people, proba))
+    print(f"Number of people: {num_people}\tSolution: {proba:2.5%}")
     return proba
 
 
