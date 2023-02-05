@@ -14,7 +14,7 @@ def get_confidence_interval(
     for i in range(1, num_iter + 1):
         x = [randint(1, num_days) for person in range(num_people)]
         x.sort()
-        is_consecutive = any(p + 1 == q for (p, q) in zip(x[:-1], x[1:]))
+        is_consecutive = any(p + 1 == q for (p, q) in zip(x[:-1], x[1:], strict=True))
         is_a_loop = x[0] + num_days - 1 == x[-1]
         is_positive = int(is_consecutive or is_a_loop)
         delta = is_positive - mean
