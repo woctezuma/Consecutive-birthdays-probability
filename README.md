@@ -3,8 +3,8 @@
 [![Build status][Build image]][Build]
 [![Code coverage][Codecov image]][Codecov]
 
-  [Build]: https://travis-ci.org/woctezuma/Consecutive-birthdays-probability
-  [Build image]: https://travis-ci.org/woctezuma/Consecutive-birthdays-probability.svg?branch=master
+  [Build]: <https://github.com/woctezuma/Consecutive-birthdays-probability/actions>
+  [Build image]: <https://github.com/woctezuma/Consecutive-birthdays-probability/workflows/Python package/badge.svg?branch=master>
 
   [PyUp]: https://pyup.io/repos/github/woctezuma/Consecutive-birthdays-probability/
   [Dependency image]: https://pyup.io/repos/github/woctezuma/Consecutive-birthdays-probability/shield.svg
