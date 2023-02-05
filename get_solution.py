@@ -12,8 +12,7 @@ def choose(n, k):
             ktok *= t
             n -= 1
         return ntok // ktok
-    else:
-        return 0
+    return 0
 
 
 def get_my_guess(num_people, num_days=365):
