@@ -1,6 +1,9 @@
 ﻿# Consecutive birthdays probability
 
-[![Build status][Build image]][Build] [![Updates][Dependency image]][PyUp] [![Python 3][Python3 image]][PyUp] [![Code coverage][Codecov image]][Codecov]
+[![Build status][Build image]][Build]
+[![Updates][Dependency image]][PyUp]
+[![Python 3][Python3 image]][PyUp]
+[![Code coverage][Codecov image]][Codecov]
 
   [Build]: https://travis-ci.org/woctezuma/Consecutive-birthdays-probability
   [Build image]: https://travis-ci.org/woctezuma/Consecutive-birthdays-probability.svg?branch=master
