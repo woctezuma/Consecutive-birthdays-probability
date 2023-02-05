@@ -6,12 +6,12 @@ import get_solution
 
 class TestGetConfidenceIntervalMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(get_confidence_interval.main())
+        assert get_confidence_interval.main() is True
 
 
 class TestGetSolutionMethods(unittest.TestCase):
     def test_main(self):
-        self.assertTrue(get_solution.main())
+        assert get_solution.main() is True
 
 
 if __name__ == "__main__":
