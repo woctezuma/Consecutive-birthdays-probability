@@ -1,6 +1,8 @@
 # Source d'inspiration :
 # http://stackoverflow.com/questions/3025162/statistics-combinations-in-python/3025547#3025547
 
+from contextlib import suppress
+
 
 def choose(n, k):
     """A fast way to calculate binomial coefficients by Andrew Dalke (contrib)."""
@@ -34,7 +36,7 @@ def get_correct_solution(num_people, num_days=365, limit_overflow=1e42):
         for i in range(1, k):
             my_product *= (num_days - (k + i)) / float(num_days * i)
         my_sum = 0
-        for j in range(0, k + 1):
+        for j in range(k + 1):
             my_sum += pow(-1, j) * choose(k, j) * pow(k - j, num_people)
         result += my_product * my_sum
         if my_sum > limit_overflow:
@@ -45,12 +47,10 @@ def get_correct_solution(num_people, num_days=365, limit_overflow=1e42):
 
 
 def main():
-    for num_of_people in range(1, 34):
-        try:
+    with suppress(OverflowError):
+        for num_of_people in range(1, 34):
             _ = get_correct_solution(num_of_people)
             _ = get_my_guess(num_of_people)
-        except OverflowError:
-            break
 
     return True
 
