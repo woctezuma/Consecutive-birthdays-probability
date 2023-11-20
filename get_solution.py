@@ -34,7 +34,7 @@ def get_correct_solution(num_people, num_days=365, limit_overflow=1e42):
         for i in range(1, k):
             my_product *= (num_days - (k + i)) / float(num_days * i)
         my_sum = 0
-        for j in range(0, k + 1):
+        for j in range(k + 1):
             my_sum += pow(-1, j) * choose(k, j) * pow(k - j, num_people)
         result += my_product * my_sum
         if my_sum > limit_overflow:
