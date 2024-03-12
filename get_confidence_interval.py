@@ -25,11 +25,7 @@ def get_confidence_interval(
     lower_bound = mean - percentile * sd / sqrt(num_iter)
     upper_bound = mean + percentile * sd / sqrt(num_iter)
     print(
-        "Number of people: {}\tLower bound: {:2.5%}\tUpper bound: {:2.5%}".format(
-            num_people,
-            lower_bound,
-            upper_bound,
-        ),
+        f"Number of people: {num_people}\tLower bound: {lower_bound:2.5%}\tUpper bound: {upper_bound:2.5%}",
     )
     return lower_bound, upper_bound
 
