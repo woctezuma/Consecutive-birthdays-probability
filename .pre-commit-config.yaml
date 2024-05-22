@@ -10,7 +10,7 @@ repos:
       --unsafe-fixes,
       --target-version, "py312",
       --select, "ALL",
-      --ignore, "ANN,D,S101,S311,T20"
+      --ignore, "ANN,D,E501,S101,S311,T20"
       ]
     - id: ruff-format
 
